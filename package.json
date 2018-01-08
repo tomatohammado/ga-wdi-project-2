@@ -1,0 +1,25 @@
+{
+  "name": "ga-wdi-project-2",
+  "version": "1.0.0",
+  "description": "An application to manage Star Wars Miniatures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomatohammado/ga-wdi-project-2.git"
+  },
+  "author": "Hammad Malik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomatohammado/ga-wdi-project-2/issues"
+  },
+  "homepage": "https://github.com/tomatohammado/ga-wdi-project-2#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.9"
+  }
+}
