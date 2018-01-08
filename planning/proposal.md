@@ -11,6 +11,8 @@ So, I am interested in building an app to list out Miniatures, and when a User l
 ### ERD
 ![ERD](./Project-2-ERD.png)
 
+There isn't a direct relationship between the Miniature model and the Collection-Item. I am using the _id of the Miniature model as a reference stored in Collection-Item, so that I'm not duplicating the data in Miniature unnecessarily, but it would be acurate to say that one Miniature belongs to zero to many Collection-Items
+
 ### CRUD functionality
 
 - [ ] READ Miniatures
