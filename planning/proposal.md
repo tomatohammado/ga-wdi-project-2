@@ -8,12 +8,12 @@ I usually use [rebelscum.com](rebelscum.com) as a resource to look up cards I do
 
 So, I am interested in building an app to list out Miniatures, and when a User logs in, they can see their own collection and make notes on individual miniatures they own.
 
-### ERD
+## ERD
 ![ERD](./Project-2-ERD.png)
 
-There isn't a direct relationship between the Miniature model and the Collection-Item. I am using the _id of the Miniature model as a reference stored in Collection-Item, so that I'm not duplicating the data in Miniature unnecessarily, but it would be acurate to say that one Miniature belongs to zero to many Collection-Items
+There isn't a direct relationship between the Miniature model and the Collection-Item. I am using the _id of the Miniature model as a reference stored in Collection-Item, so that I'm not duplicating the data in Miniature unnecessarily, but it would be acurate to say that one Miniature belongs to zero to many Collection-Items.
 
-### CRUD functionality
+## CRUD functionality
 
 - [ ] READ Miniatures
 
@@ -35,15 +35,15 @@ There isn't a direct relationship between the Miniature model and the Collection
 
 This is what I'm aiming for for the MVP. I think it would be good to add an "admin-level" field to the Users model, and make a view where an admin can create and delete Miniatures, but to start I'm going to seed that collection manually.
 
-### Implementation
+## Implementation
 
 I want to make something similar to book-e-backend and the Gaphy express-api-lab in that I want to make my backend send JSON, for some other front end application to read from.
 
-I have to think a little bit about how this will affect authentication. I will likely come to office hours the morning of Monday to talk about this implemenatation further, but it would be great if you could give me any feedback about it.
+EDIT: after talking about it at office hours, the microservice approach would introduce complications I don't think are worth the cost to begin with. So I'll save it for later.
 
-### Considerations
+## Considerations
 
- I already have permission to use the image assets for the Miniatures from rebelscum.com as per their [image use policy](http://www.rebelscum.com/use.asp)
+ I already have permission to use the image assets for the Miniatures from rebelscum.com as per their [image use policy](http://www.rebelscum.com/use.asp).
 
 ---
 
@@ -62,3 +62,11 @@ I also have to think about how this will work with JSON. I found a [resource](ht
 ---
 
 I am also interested in using Vue instead of Handlebars, but would like to ask if that is ok first.
+
+EDIT: on second though, I'll start with Handlebars because Vue will have some learning curve and I don't want to waste too much time if I don't have to. MVP first.
+
+## Reach Goals
+
+- [ ] Passport authorization, but this is kinda vital to how I want my app to work so I'm going to try to include it like it were a MVP requirement.
+
+- [ ] Twilio integration for 2-factor integration.
