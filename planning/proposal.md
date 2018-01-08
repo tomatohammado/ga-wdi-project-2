@@ -31,6 +31,8 @@ So, I am interested in building an app to list out Miniatures, and when a User l
 
 - [ ] DELETE User
 
+This is what I'm aiming for for the MVP. I think it would be good to add an "admin-level" field to the Users model, and make a view where an admin can create and delete Miniatures, but to start I'm going to seed that collection manually.
+
 ### Implementation
 
 I want to make something similar to book-e-backend and the Gaphy express-api-lab in that I want to make my backend send JSON, for some other front end application to read from.
@@ -45,13 +47,15 @@ I have to think a little bit about how this will affect authentication. I will l
 
 A challenge I know I have to address is how I plan to store the images themselves.
 
-The simplest way would be to either host them on imgur or possibly even hotlink the images from rebelscum.com directly. I don't think the latter is good practice, and the former would be quick but not my first choice.
+The simplest way would be to store the images directly in an `assets/images` directory and store the references to the images as a String in the field, which is perfectly fine. I might just do that for the MVP.
+
+But I am interested in seeing if I can store the images directly in the mongo database itself.
 
 I should be able to do this with the Binary Data field type, as long as my total Document is less than 16MB (which might not be possible).
 
 There is also something called [GridFS](https://docs.mongodb.com/manual/core/gridfs/) that can allow me to work with files that exceed the 16MB limit.
 
-However, I also have to think about how this will work with JSON. I found a [resource](https://stackoverflow.com/a/34485762) on Stack Overflow about it, but I don't know from reading it if this will be an issue or not.
+I also have to think about how this will work with JSON. I found a [resource](https://stackoverflow.com/a/34485762) on Stack Overflow about it, but I don't know from reading it if this will be an issue or not.
 
 ---
 
