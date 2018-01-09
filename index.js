@@ -15,9 +15,9 @@ app.engine('.hbs', hbs({
   defaultLayout: 'layout-main'
 }))
 
-/* do I need _both_ of these lines?
-// my gut says the second one is what I want (would work for deployment) */
-app.use('/assets', express.static('public'))
+/* do I need _both_ of these lines? probably not
+// maybe don't need 'assets/' either */
+// app.use('/{assets}', express.static('public'))
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
