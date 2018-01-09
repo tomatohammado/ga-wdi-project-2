@@ -13,3 +13,7 @@
 - [css: make child same height as parent](https://stackoverflow.com/a/26378915)
 
 - [background image, via transparenttextures.com](https://www.transparenttextures.com/)
+
+- [mongodb: remove document by id via CLI](https://stackoverflow.com/a/10152586)
+
+- [css: how to change placeholer text styles (overwrite materialize defaults)](https://stackoverflow.com/a/15497614)
