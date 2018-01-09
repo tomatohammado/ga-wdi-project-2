@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #002F4F;
+  background-image: url('../images/asfalt-light.png')
+}
+
+h1 {
+  color: yellow;
+}
+
 .container-miniatures {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +29,7 @@
 .container-miniature-item > header {
   padding: 0 .75rem;
   flex-grow: 2;
+  color: #EEE;
 }
 
 .container-miniature-item > img {
