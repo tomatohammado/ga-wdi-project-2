@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+.container-miniatures {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-miniature-item {
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.container-miniature-item img {
+  width: 100%;
+}
