@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
-app.listen(app.get('port'), _ => {
-  console.log('Server started on port 4000')
+/* I cannot use an arrow function here because I use this.address().port */
+app.listen(app.get('port'), function () {
+  console.log(`Server started on port ${this.address().port}`)
 })
