@@ -11,7 +11,7 @@ app.set('view engine', 'hbs')
 app.engine('.hbs', hbs({
   extname: '.hbs',
   partialDir: 'views/',
-  layoutsDir: '/view',
+  layoutsDir: 'views/',
   defaultLayout: 'layout-main'
 }))
 
@@ -21,6 +21,10 @@ app.engine('.hbs', hbs({
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+
+const routes = require('./config/routes')
+
+app.use(routes)
 
 /* I cannot use an arrow function here because I use this.address().port */
 app.listen(app.get('port'), function () {
