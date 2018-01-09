@@ -9,6 +9,16 @@ function getMiniatures (req, res) {
   })
 }
 
+function postMiniature (req, res) {
+  // console.log(req.body.newMiniature)
+  // res.redirect('/')
+  Miniature.create(req.body.newMiniature)
+   .then(_ => {
+     res.redirect('/')
+   })
+}
+
 module.exports = {
-  getMiniatures: getMiniatures
+  getMiniatures: getMiniatures,
+  postMiniature: postMiniature
 }

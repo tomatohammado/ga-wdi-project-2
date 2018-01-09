@@ -16,6 +16,10 @@ h1 {
   flex-wrap: wrap;
 }
 
+.container-miniatures > .col:last-of-type {
+  margin-left: 0 !important;
+}
+
 .container-miniature-item {
   display: flex;
   flex-direction: column;
@@ -39,6 +43,10 @@ h1 {
 
 .container-create-miniature > header {
   color: #EEE;
+}
+
+.container-create-miniature > form > input{
+  color: #d1d1d1;
 }
 
 .container-create-miniature > form > button {
