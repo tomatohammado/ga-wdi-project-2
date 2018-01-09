@@ -1,8 +1,12 @@
 <section class="container-miniatures row">
   {{#each miniatures as |miniature index|}}
-    <div class="container-miniature-item col s6 m6 l6 xl6">
-      <h2>{{miniature.name}}</h2>
-      <img src="./images/{{miniature.imageUrl}}" alt="{{miniature.name}}">
+    <div class="col s6 m6 l6 xl6">
+      <div class="container-miniature-item">
+        <header>
+          <h2 class="flow-text">{{miniature.name}}</h2>
+        </header>
+        <img src="./images/{{miniature.imageUrl}}" alt="{{miniature.name}}">
+      </div>
     </div>
   {{/each}}
 </section>
