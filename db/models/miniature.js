@@ -7,4 +7,4 @@ const MiniatureSchema = new mongoose.Schema({
 
 mongoose.model('Miniature', MiniatureSchema)
 
-module.export = mongoose
+module.exports = mongoose
