@@ -24,5 +24,5 @@ app.use(methodOverride('_method'))
 
 /* I cannot use an arrow function here because I use this.address().port */
 app.listen(app.get('port'), function () {
-  console.log(`Server started on port ${this.address().port}`)
+  console.log(`App started on port ${this.address().port}`)
 })
