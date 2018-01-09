@@ -16,7 +16,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.container-miniatures > .col:last-of-type {
+.container-miniatures .col:last-of-type {
   margin-left: 0 !important;
 }
 
@@ -30,25 +30,25 @@ h1 {
   height: calc(100% - 10px);
 }
 
-.container-miniature-item > header {
+.container-miniature-item header {
   padding: 0 .75rem;
   flex-grow: 2;
   color: #EEE;
 }
 
-.container-miniature-item > img {
+.container-miniature-item img {
   width: 100%;
   border-radius: 2px;
 }
 
-.container-create-miniature > header {
+.container-create-miniature header {
   color: #EEE;
 }
 
-.container-create-miniature > form > input{
+.container-create-miniature form > input{
   color: #d1d1d1;
 }
 
-.container-create-miniature > form > button {
+.container-create-miniature form > button {
   color: #EEE;
 }
