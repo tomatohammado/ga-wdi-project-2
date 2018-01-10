@@ -16,6 +16,10 @@ h1 {
   font-family: "SF Distant Galaxy", sans-serif;
 }
 
+nav {
+  margin-bottom: 1.68rem;
+}
+
 .container-miniatures {
   display: flex;
   flex-wrap: wrap;
