@@ -1,19 +1,15 @@
-<h2>Signup</h2>
+<section class="container-form">
+  <header>
+    <h2>Signup</h2>
+  </header>
 
-{{#if message}}
-  <div class="alert alert-danger">{{message}}</div>
-{{/if}}
+  {{#if message}}
+    <div class="alert alert-danger">{{message}}</div>
+  {{/if}}
 
-<form method="post" action="/signup">
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input class="form-control" type="text" name="email" id="email">
-  </div>
-
-  <div class="form-group">
-    <label for="email">Password</label>
-    <input class="form-control" type="password" name="password" id="password">
-  </div>
-
-  <input class="btn btn-default" type="submit">
-</form>
+  <form method="post" action="/signup">
+    <input class="form-control" type="text" name="email" placeholder="Email">
+    <input class="form-control" type="password" name="password" placeholder="Password">
+    <button type="submit" class="waves-effect waves-light btn-large btn-flat">Sign Up</button>
+  </form>
+</section>
