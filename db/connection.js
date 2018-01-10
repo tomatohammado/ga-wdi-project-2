@@ -7,9 +7,12 @@ mongoose.Promise = Promise
 
 const mongoUri = 'mongodb://localhost/star_wars_miniatures'
 
-mongoose
-  .connect(mongoUri, { useMongoClient: true })
-  .then(connection => console.log(`connection established to db ${connection.db.databaseName}`))
-  .catch(error => console.log('Connection Failed!', error))
+if (process.env.NODE_ENV === 'production') {
+  mongoose.connect(process.env.MLAB_URL, { useMongoClient: true })
+} else {
+  mongoose.connect(mongoUri, { useMongoClient: true })
+    .then(connection => console.log(`connection established to db ${connection.db.databaseName}`))
+    .catch(error => console.log('Connection Failed!', error))
+}
 
 module.exports = mongoose
