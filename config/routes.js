@@ -10,4 +10,6 @@ router.route('/')
 router.route('/:miniatureId')
   .get(miniaturesController.getMiniature)
   .put(miniaturesController.putMiniature)
+  .delete(miniaturesController.deleteMiniature)
+
 module.exports = router

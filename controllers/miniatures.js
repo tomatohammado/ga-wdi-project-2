@@ -13,9 +13,7 @@ function postMiniature (req, res) {
   // console.log(req.body.newMiniature)
   // res.redirect('/')
   Miniature.create(req.body.newMiniature)
-   .then(_ => {
-     res.redirect('/')
-   })
+   .then(_ => res.redirect('/'))
 }
 
 function getMiniature (req, res) {
@@ -27,14 +25,18 @@ function getMiniature (req, res) {
 
 function putMiniature (req, res) {
   Miniature.findByIdAndUpdate(req.params.miniatureId, req.body.updateMiniature, { new: true })
-  .then(miniature => {
-    res.redirect(`/${miniature._id}`)
-  })
+    .then(miniature => res.redirect(`/${miniature._id}`))
+}
+
+function deleteMiniature (req, res) {
+  Miniature.findByIdAndRemove(req.params.miniatureId)
+    .then(_ => res.redirect('/'))
 }
 
 module.exports = {
   getMiniatures: getMiniatures,
   postMiniature: postMiniature,
   getMiniature: getMiniature,
-  putMiniature: putMiniature
+  putMiniature: putMiniature,
+  deleteMiniature: deleteMiniature
 }
