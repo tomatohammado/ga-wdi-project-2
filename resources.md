@@ -20,6 +20,6 @@
 
 - [css: how to change placeholer text styles (overwrite materialize defaults)](https://stackoverflow.com/a/15497614)
 
-- [font: Star Jedi](https://www.dafont.com/star-jedi.font)
+- [font: SF Distant Galaxy](https://www.dafont.com/sf-distant-symbols.font)
 
 - [css: letter-spacing property](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)

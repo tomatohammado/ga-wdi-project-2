@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Star Jedi";
-  src: url('../fonts/Starjedi.ttf');
+  font-family: "SF Distant Galaxy";
+  src: url('../fonts/SF Distant Galaxy.ttf');
 }
 * {
   box-sizing: border-box;
@@ -13,8 +13,7 @@ body {
 
 h1 {
   color: yellow;
-  font-family: "Star Jedi", sans-serif;
-  letter-spacing: 2px;
+  font-family: "SF Distant Galaxy", sans-serif;
 }
 
 .container-miniatures {
