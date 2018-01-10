@@ -25,7 +25,7 @@ function getMiniature (req, res) {
 
 function putMiniature (req, res) {
   Miniature.findByIdAndUpdate(req.params.miniatureId, req.body.updateMiniature, { new: true })
-    .then(miniature => res.redirect(`/${miniature._id}`))
+    .then(miniature => res.redirect(`/miniatures/${miniature._id}`))
 }
 
 function deleteMiniature (req, res) {

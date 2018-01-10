@@ -7,7 +7,7 @@ router.route('/')
   .get(miniaturesController.getMiniatures)
   .post(miniaturesController.postMiniature)
 
-router.route('/:miniatureId')
+router.route('/miniatures/:miniatureId')
   .get(miniaturesController.getMiniature)
   .put(miniaturesController.putMiniature)
   .delete(miniaturesController.deleteMiniature)

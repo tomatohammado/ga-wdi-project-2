@@ -4,7 +4,7 @@
       <header>
         <h2 class="flow-text">{{miniature.name}}</h2>
       </header>
-      <img src="./images/{{miniature.imageUrl}}" alt="{{miniature.name}}">
+      <img src="/images/{{miniature.imageUrl}}" alt="{{miniature.name}}">
     </div>
   </div>
 </section>
@@ -13,7 +13,7 @@
   <header>
     <h2 class="center">Update Miniature</h2>
   </header>
-  <form action="/{{miniature._id}}?_method=put" method="post">
+  <form action="/miniatures/{{miniature._id}}?_method=put" method="post">
     <input type="text" name="updateMiniature[name]" placeholder="Name">
     <input type="text" name="updateMiniature[imageUrl]" placeholder="Image Url">
     <button type="submit" class="waves-effect waves-light btn-large btn-flat">Update</button>
@@ -21,7 +21,7 @@
 </section>
 
 <section class="container-form delete-miniature">
-  <form action="/{{miniature._id}}?_method=delete" method="post">
+  <form action="/miniatures/{{miniature._id}}?_method=delete" method="post">
     <button type="submit" class="waves-effect waves-light btn-large btn-flat">Delete</button>
   </form>
 </section>
