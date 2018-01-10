@@ -3,6 +3,11 @@ const hbs = require('express-handlebars')
 const parser = require('body-parser')
 const methodOverride = require('method-override')
 const path = require('path')
+const passport = require('passport')
+const flash = require('connect-flash')
+const morgan = require('morgan')
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
 
 const app = express()
 
@@ -15,15 +20,29 @@ app.engine('.hbs', hbs({
   defaultLayout: 'layout-main'
 }))
 
-/* do I need _both_ of these lines? probably not
-// maybe don't need 'assets/' either */
-// app.use('/{assets}', express.static('public'))
+app.use(morgan('dev'))
+app.use(cookieParser())
+/* the express-authorization lesson had this line, don't know if I need it */
+// app.use(bodyParser())
+
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
-const routes = require('./config/routes')
+app.use(session({ secret: 'Hmod\'s Star Wars Miniatures App' }))
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(flash())
 
+require('./config/passport')(passport)
+
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user
+  /* ahhhh - there's that 'next' argument. looks like I'll need it after all */
+  next()
+})
+
+const routes = require('./config/routes')
 app.use(routes)
 
 /* I cannot use an arrow function here because I use this.address().port */

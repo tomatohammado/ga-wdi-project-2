@@ -96,3 +96,4 @@ Definitely the simplest way to solve this issue.
   - link to rebelscum.com
   - link to custom font
   - link to gists of terminal windows
+- possibly some sort of reference to my toggl timer metrics
