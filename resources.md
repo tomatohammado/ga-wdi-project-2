@@ -23,3 +23,5 @@
 - [font: SF Distant Galaxy](https://www.dafont.com/sf-distant-symbols.font)
 
 - [css: letter-spacing property](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+
+- [mongodb: remove documents from collection](https://docs.mongodb.com/v3.0/tutorial/remove-documents/#remove-all-documents)

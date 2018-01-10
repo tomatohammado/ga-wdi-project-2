@@ -20,14 +20,12 @@ app.engine('.hbs', hbs({
   defaultLayout: 'layout-main'
 }))
 
-app.use(morgan('dev'))
-app.use(cookieParser())
-/* the express-authorization lesson had this line, don't know if I need it */
-// app.use(bodyParser())
-
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+
+app.use(morgan('dev'))
+app.use(cookieParser())
 
 app.use(session({
   secret: 'Hmod\'s Star Wars Miniatures App',

@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 const Miniature = mongoose.model('Miniature')
 
-/* express-passport-authentication uses an extra parameter called 'next' */
+/* express-authentication uses an extra parameter called 'next' */
 function getMiniatures (req, res) {
   Miniature.find({})
   .then(miniatures => {
@@ -10,8 +10,6 @@ function getMiniatures (req, res) {
 }
 
 function postMiniature (req, res) {
-  // console.log(req.body.newMiniature)
-  // res.redirect('/')
   Miniature.create(req.body.newMiniature)
    .then(_ => res.redirect('/'))
 }
