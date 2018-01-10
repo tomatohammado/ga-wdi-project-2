@@ -5,7 +5,7 @@ const mongoose = require('./models/miniature')
 */
 mongoose.Promise = Promise
 
-const mongoUri = 'mongodb://localhost/starWarsMiniatures'
+const mongoUri = 'mongodb://localhost/star_wars_miniatures'
 
 mongoose
   .connect(mongoUri, { useMongoClient: true })
