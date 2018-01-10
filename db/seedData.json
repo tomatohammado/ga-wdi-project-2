@@ -8,24 +8,28 @@
     "imageUrl": "SWminiCOTF10banecardfr.jpg"
   },
   {
-    "name": "Yoda of Dagobah",
-    "imageUrl": "SWminiCOTF45yodacardfr.jpg"
-  },
-  {
     "name": "Logray, Ewok Shaman",
     "imageUrl": "swminiIE-34card2.jpg"
-  },
-  {
-    "name": "Grand Master Luke Skywalker",
-    "imageUrl": "swminiJA-27card2.jpg"
   },
   {
     "name": "Darth Caedus",
     "imageUrl": "SWminiLOTF04caeduscardfr.jpg"
   },
   {
-    "name": "Kyle Katarn, Jedi Battlemaster",
-    "imageUrl": "SWminiLOTF34kylekatarncardfr.jpg"
+    "name": "Grand Master Luke Skywalker",
+    "imageUrl": "swminiJA-27card2.jpg"
+  },
+  {
+    "name": "Luke Skywalker, Force Spirit",
+    "imageUrl": "SWminiLOTF36lukespiritcardfr.jpg"
+  },
+  {
+    "name": "Han Solo, Galactic Hero",
+    "imageUrl": "SWminiLOTF33hansolocardfr.jpg"
+  },
+  {
+    "name": "Han Solo in Carbonite",
+    "imageUrl": "SWminiTFU07hancarbCF.jpg"
   },
   {
     "name": "Cade Skywalker, Bounty Hunter",
@@ -34,9 +38,5 @@
   {
     "name": "R2-D2, Astromech Droid",
     "imageUrl": "SWminiROTSr2d2cardfr.jpg"
-  },
-  {
-    "name": "Han Solo in Carbonite",
-    "imageUrl": "SWminiTFU07hancarbCF.jpg"
   }
 ]
