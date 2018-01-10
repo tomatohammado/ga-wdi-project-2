@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Star Jedi";
+  src: url('../fonts/Starjedi.ttf');
+}
 * {
   box-sizing: border-box;
 }
@@ -9,6 +13,8 @@ body {
 
 h1 {
   color: yellow;
+  font-family: "Star Jedi", sans-serif;
+  letter-spacing: 2px;
 }
 
 .container-miniatures {
