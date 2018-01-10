@@ -39,6 +39,7 @@ h1 {
 .container-miniature-item img {
   width: 100%;
   border-radius: 2px;
+  bottom: 0;
 }
 
 .container-form header {
