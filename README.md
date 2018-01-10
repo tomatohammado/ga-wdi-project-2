@@ -4,6 +4,10 @@
 
 See `planning/` for proposal
 
+## Presentation
+
+_{**insert youtube link here**}_
+
 ## Technologies Used
 
 _core technologies_
@@ -54,6 +58,15 @@ In the interest of finishing the MVP, I made CRUD operations on the Miniatures m
 
 User authentication is the first bonus feature I plan on adding.
 
+## Implenation Strategy
+
+### MVP
+
+1. I started with the model and seeding the database
+2. then I made sure index.js was working
+3. preliminary views
+4. controllers and routes
+
 ## Lingering problems
 
 When updating a Miniature, if a field is left blank, then the original value is overwritten and made blank after updating.
@@ -69,3 +82,17 @@ Definitely the simplest way to solve this issue.
 - [ ] User Authentication
 - [ ] 2-factor authentication (twilio)
 - [ ] tests
+
+## Notes for Presentation video
+
+- this is kinda obvious, but what was interesting about my code?
+- what were the things I had to do to wrestle with materialize
+- file structure: separate controller, routes files
+- my...different way of seeding files (and why I prefer it)
+- in video credits, include:
+  - link to deployed site
+  - link to github repo
+  - vscode extensions?
+  - link to rebelscum.com
+  - link to custom font
+  - link to gists of terminal windows
