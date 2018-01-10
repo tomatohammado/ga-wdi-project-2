@@ -42,8 +42,8 @@ app.use((req, res, next) => {
   next()
 })
 
-const routes = require('./config/routes')
-app.use(routes)
+const routesMiniatures = require('./config/routesMiniatures')
+app.use(routesMiniatures)
 
 /* I cannot use an arrow function here because I use this.address().port */
 app.listen(app.get('port'), function () {
