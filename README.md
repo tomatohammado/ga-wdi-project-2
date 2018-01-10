@@ -67,6 +67,14 @@ User authentication is the first bonus feature I plan on adding.
 3. preliminary views
 4. controllers and routes
 
+### User Authentication
+
+1. npm packages
+2. index.js
+3. user model (/db/models/user.js)
+4. config/passport.js
+5. users controller?
+
 ## Lingering problems
 
 When updating a Miniature, if a field is left blank, then the original value is overwritten and made blank after updating.
