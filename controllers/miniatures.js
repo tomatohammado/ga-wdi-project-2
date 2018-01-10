@@ -25,8 +25,16 @@ function getMiniature (req, res) {
     })
 }
 
+function putMiniature (req, res) {
+  Miniature.findByIdAndUpdate(req.params.miniatureId, req.body.updateMiniature, { new: true })
+  .then(miniature => {
+    res.redirect(`/${miniature._id}`)
+  })
+}
+
 module.exports = {
   getMiniatures: getMiniatures,
   postMiniature: postMiniature,
-  getMiniature: getMiniature
+  getMiniature: getMiniature,
+  putMiniature: putMiniature
 }

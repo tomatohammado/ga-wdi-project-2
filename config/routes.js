@@ -9,5 +9,5 @@ router.route('/')
 
 router.route('/:miniatureId')
   .get(miniaturesController.getMiniature)
-
+  .put(miniaturesController.putMiniature)
 module.exports = router

@@ -41,15 +41,15 @@ h1 {
   border-radius: 2px;
 }
 
-.container-create-miniature header {
+.container-form header {
   color: #EEE;
 }
 
-.container-create-miniature form > input{
+.container-form form > input{
   color: #d1d1d1;
 }
 
-.container-create-miniature form > button {
+.container-form form > button {
   color: #EEE;
 }
 
