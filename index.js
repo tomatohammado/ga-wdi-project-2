@@ -29,7 +29,11 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
-app.use(session({ secret: 'Hmod\'s Star Wars Miniatures App' }))
+app.use(session({
+  secret: 'Hmod\'s Star Wars Miniatures App',
+  resave: true,
+  saveUninitialized: true
+}))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(flash())
@@ -43,7 +47,9 @@ app.use((req, res, next) => {
 })
 
 const routesMiniatures = require('./config/routesMiniatures')
+const routresUsers = require('./config/routesUsers')
 app.use(routesMiniatures)
+app.use(routresUsers)
 
 /* I cannot use an arrow function here because I use this.address().port */
 app.listen(app.get('port'), function () {

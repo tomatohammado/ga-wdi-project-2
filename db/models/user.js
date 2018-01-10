@@ -17,6 +17,7 @@ User.methods.validPassword = function (password) {
 }
 
 /* uh...this is a little different from the express-auth lesson */
-mongoose.model('User', User)
+// mongoose.model('User', User)
+// module.exports = mongoose
 
-module.exports = mongoose
+module.exports = mongoose.model('User', User)

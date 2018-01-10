@@ -1,13 +1,13 @@
 const LocalStrategy = require('passport-local').Strategy
 const User = require('../db/models/user')
 
-module.exports = passport => {
-  passport.serializeUser((user, callback) => {
+module.exports = function (passport) {
+  passport.serializeUser(function (user, callback) {
     callback(null, user.id)
   })
 
-  passport.deserializeUser((id, callback) => {
-    User.findById(id, (err, user) => {
+  passport.deserializeUser(function (id, callback) {
+    User.findById(id, function (err, user) {
       callback(err, user)
     })
   })
@@ -16,9 +16,9 @@ module.exports = passport => {
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
-  }, (req, email, password, callback) => {
+  }, function (req, email, password, callback) {
     /* Find a User with this email */
-    User.findOne({ 'local.email': email }, (err, user) => {
+    User.findOne({ 'local.email': email }, function (err, user) {
       if (err) return callback(err)
 
       // If there already is a user with this email
@@ -31,7 +31,7 @@ module.exports = passport => {
         newUser.local.email = email
         newUser.local.password = newUser.encrypt(password)
 
-        newUser.save(err => {
+        newUser.save(function (err) {
           if (err) throw err
           return callback(null, newUser)
         })
@@ -43,9 +43,9 @@ module.exports = passport => {
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
-  }, (req, email, password, callback) => {
+  }, function (req, email, password, callback) {
     // Search for a user with this email
-    User.findOne({ 'local.email': email }, (err, user) => {
+    User.findOne({ 'local.email': email }, function (err, user) {
       if (err) {
         return callback(err)
       }
