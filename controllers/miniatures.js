@@ -18,7 +18,15 @@ function postMiniature (req, res) {
    })
 }
 
+function getMiniature (req, res) {
+  Miniature.findOne({ _id: req.params.miniatureId })
+    .then(miniature => {
+      res.render('miniature-item', {miniature: miniature})
+    })
+}
+
 module.exports = {
   getMiniatures: getMiniatures,
-  postMiniature: postMiniature
+  postMiniature: postMiniature,
+  getMiniature: getMiniature
 }
