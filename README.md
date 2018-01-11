@@ -138,14 +138,14 @@ Definitely the simplest way to solve this issue.
 
 - [ ] Create 'secret' page for authenticated use, have dropdown to add Miniatures to a personal collection (some field belonging to a User document, probably an array)
 - [ ] Store images in mongodb
-- [ ] User Authorization - allows higher-priveledge users to add to Miniatures collection
+- [ ] User Authorization - allows higher-privilege users to add to Miniatures collection
 - [ ] Functionality without reloading the page (some actions will still need redirects)
 
 ## War Stories
 
 That error I got because I didn't realize I had the same URI trying to do two different routing options
 
-When I Googled the error, I only got three results from all of the internect, and two of them linked to the top hit.
+When I Googled the error, I only got three results from all of the internet, and two of them linked to the top hit.
 
 Had to reaaaaally think about what my code was doing to find the solution.
 
