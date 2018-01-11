@@ -151,7 +151,7 @@ Had to reaaaaally think about what my code was doing to find the solution.
 
 ---
 
-going through effing materialize 1.0.0-alpha.3 javascript file because the implementation in their docs changed, and I had to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work.
+going through materialize 1.0.0-alpha.3 javascript file because the implementation in their docs changed, and I had to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work.
 
 Meaning, I had to come up with this:
 
