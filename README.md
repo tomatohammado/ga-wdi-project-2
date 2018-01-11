@@ -4,29 +4,50 @@
 
 See `planning/` for proposal
 
+I was cautioned against the microservice approach for this project, as we will do something similar in project 3.
+
 ## Presentation
 
 _{**insert youtube link here**}_
 
 ## Technologies Used
 
-_core technologies_
+### _core technologies_
+
 - node
 - npm
 
-_database_
+### _database_
+
 - mongoDB
 - mongoose
 
-_web framework_
+### _web framework_
+
 - express
 
-_templating_
+### _templating_
+
 - express-handlebars
 
-_important npm packages_
+### _important npm packages_
+
 - body-parser
 - method-override
+
+### _authentication_
+
+- passport
+- passport-local
+- bcrypt-nodejs
+- connect-flash
+- cookie-parser
+- express-session
+
+### _development_
+
+- nodemon
+- morgan
 
 ## Installation Instructions
 
@@ -48,11 +69,11 @@ On the Miniature's page, the user can update the name and imageUrl of that Minia
 
 At any time, the user can click on the Main Header (rendered using a free custom Star Wars themed font) to navigate back to the home page.
 
----
+## Bonus Features
 
-I have also implemented user authentication as a bonus feature.
+I have also implemented user authentication using Passport
 
-A users can sign up, and register an unused email and any password. If a user tries to signup an email that is already registered, the signup page will reload and flash an error message. 
+A users can sign up, and register an unused email and any password. If a user tries to signup an email that is already registered, the signup page will reload and flash an error message.
 
 Upon a successful signup, the now registered user is automatically logged in and redirected to the homepage.
 
@@ -103,13 +124,15 @@ An easy fix for this would be to automatically populate the Update form with the
 
 Definitely the simplest way to solve this issue.
 
----
-
 ## Bonus Goals
 
 - [x] User Authentication
+- [ ] Other authorization strategies
+  - [ ] Facebook
+  - [ ] Twitter
+  - [ ] Github
 - [ ] 2-factor authentication (twilio)
-- [ ] tests
+- [ ] tests (I want to make this a higher priority in my process, but I need practice to write tests efficiently)
 
 ## Reach Goals (probably won't happen before presentations)
 
@@ -117,6 +140,32 @@ Definitely the simplest way to solve this issue.
 - [ ] Store images in mongodb
 - [ ] User Authorization - allows higher-priveledge users to add to Miniatures collection
 - [ ] Functionality without reloading the page (some actions will still need redirects)
+
+## War Stories
+
+That error I got because I didn't realize I had the same URI trying to do two different routing options
+
+When I Googled the error, I only got three results from all of the internect, and two of them linked to the top hit.
+
+Had to reaaaaally think about what my code was doing to find the solution.
+
+---
+
+going through effing materialize 1.0.0-alpha.3 javascript file because the implementation in their docs changed, and I had to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work.
+
+Meaning, I had to come up with this:
+
+```js
+M.toast({ html: '{{message}}' }, 4000)
+```
+
+...instead of what was given in the documentation:
+
+```js
+Materialize.toast('{{message}}', 4000)
+```
+
+I had to do something similar to get the responsive navbar to work, but couldn't determine from the 1.0.0-alpha.3 source code what to use as `@params {Element} el`, and there were over 2200 instances of 'el' in the source so I had to drop it and go back to an earlier version.
 
 ## Notes for Presentation video
 
@@ -132,22 +181,3 @@ Definitely the simplest way to solve this issue.
   - link to custom font
   - link to gists of terminal windows
 - possibly some sort of reference to my toggl timer metrics
-
-## Stories
-
-That error I got because I didn't realize I had the same URI trying to do two different routing options
-
----
-
-going through effing materialize 1.0.0-alpha.3 javascript file because the implementation in their docs changed, and I had to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work.
-
-Meaning, I had to come up with this:
-```js
-M.toast({ html: '{{message}}' }, 4000)
-```
-...instead of what was given in the documentation:
-```js
-Materialize.toast('{{message}}', 4000)
-```
-
-I had to do something similar to get the responsive navbar to work, but couldn't determine from the 1.0.0-alpha.3 source code what to use as `@params {Element} el`, and there were over 2200 instances of 'el' in the source so I had to drop it and go back to an earlier version.
