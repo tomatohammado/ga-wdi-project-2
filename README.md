@@ -114,4 +114,13 @@ That error I got because I didn't realize I had the same URI trying to do two di
 
 ---
 
-going through effing materialize 1.0.0-alpha.3 javascript file to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work 
+going through effing materialize 1.0.0-alpha.3 javascript file to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work with:
+```js
+M.toast({ html: '{{message}}' }, 4000)
+```
+...instead of:
+```js
+Materialize.toast('{{message}}', 4000)
+```
+
+I had to do something similar to get the responsive navbar to work, but couldn't determine from the 1.0.0-alpha.3 source code what to use as `@params {Element} el`
