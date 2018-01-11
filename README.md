@@ -73,7 +73,9 @@ User authentication is the first bonus feature I plan on adding.
 2. index.js
 3. user model (/db/models/user.js)
 4. config/passport.js
-5. users controller?
+5. users controller
+6. users routes
+7. login and signup views
 
 ## Lingering problems
 
@@ -87,7 +89,7 @@ Definitely the simplest way to solve this issue.
 
 ## Bonus Goals
 
-- [ ] User Authentication
+- [x] User Authentication
 - [ ] 2-factor authentication (twilio)
 - [ ] tests
 
@@ -105,3 +107,11 @@ Definitely the simplest way to solve this issue.
   - link to custom font
   - link to gists of terminal windows
 - possibly some sort of reference to my toggl timer metrics
+
+## Stories
+
+That error I got because I didn't realize I had the same URI trying to do two different routing options
+
+---
+
+going through effing materialize 1.0.0-alpha.3 javascript file to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work 
