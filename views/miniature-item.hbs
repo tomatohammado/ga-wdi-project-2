@@ -14,8 +14,8 @@
     <h2 class="center">Update Miniature</h2>
   </header>
   <form action="/miniatures/{{miniature._id}}?_method=put" method="post">
-    <input type="text" name="updateMiniature[name]" placeholder="Name">
-    <input type="text" name="updateMiniature[imageUrl]" placeholder="Image Url">
+    <input type="text" name="updateMiniature[name]" placeholder="Name" value="{{miniature.name}}">
+    <input type="text" name="updateMiniature[imageUrl]" placeholder="Image Url" value="{{miniature.imageUrl}}">
     <button type="submit" class="waves-effect waves-light btn-large btn-flat">Update</button>
   </form>
 </section>

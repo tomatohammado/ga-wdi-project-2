@@ -48,6 +48,20 @@ On the Miniature's page, the user can update the name and imageUrl of that Minia
 
 At any time, the user can click on the Main Header (rendered using a free custom Star Wars themed font) to navigate back to the home page.
 
+---
+
+I have also implemented user authentication as a bonus feature.
+
+A users can sign up, and register an unused email and any password. If a user tries to signup an email that is already registered, the signup page will reload and flash an error message. 
+
+Upon a successful signup, the now registered user is automatically logged in and redirected to the homepage.
+
+Once logged in, the navbar changes to allow the authenticated user to log out.
+
+The user can log out on any page via the navbar. The user can log in again using the same credentials. If the password is incorrect, the page will reload the login page and flash a warning.
+
+If a user tries to log in with an email that hasn't been registered through the signup page first, the login page will reload and flash a different error.
+
 ## Approach
 
 I originally wanted the Miniature model to be immutable, and for the CRUD operations to apply on a 'Collections' field for the User model.
@@ -79,6 +93,8 @@ User authentication is the first bonus feature I plan on adding.
 
 ## Lingering problems
 
+- [x] **"Unsafe" Updates**
+
 When updating a Miniature, if a field is left blank, then the original value is overwritten and made blank after updating.
 
 For example, if you update the name but leave the Image Url blank, then no image will be displayed after updating.
@@ -87,11 +103,18 @@ An easy fix for this would be to automatically populate the Update form with the
 
 Definitely the simplest way to solve this issue.
 
+---
+
 ## Bonus Goals
 
 - [x] User Authentication
 - [ ] 2-factor authentication (twilio)
 - [ ] tests
+
+## Reach Goals (probably won't happen before presentations)
+
+- [ ] User Authorization
+- [ ] Functionality without reloading the page (some actions will still need redirects)
 
 ## Notes for Presentation video
 
@@ -114,13 +137,15 @@ That error I got because I didn't realize I had the same URI trying to do two di
 
 ---
 
-going through effing materialize 1.0.0-alpha.3 javascript file to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work with:
+going through effing materialize 1.0.0-alpha.3 javascript file because the implementation in their docs changed, and I had to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work.
+
+Meaning, I had to come up with this:
 ```js
 M.toast({ html: '{{message}}' }, 4000)
 ```
-...instead of:
+...instead of what was given in the documentation:
 ```js
 Materialize.toast('{{message}}', 4000)
 ```
 
-I had to do something similar to get the responsive navbar to work, but couldn't determine from the 1.0.0-alpha.3 source code what to use as `@params {Element} el`
+I had to do something similar to get the responsive navbar to work, but couldn't determine from the 1.0.0-alpha.3 source code what to use as `@params {Element} el`, and there were over 2200 instances of 'el' in the source so I had to drop it and go back to an earlier version.
