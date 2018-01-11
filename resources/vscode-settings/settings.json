@@ -1,0 +1,38 @@
+{
+  "sync.gist": "da2f2d2b4e09aa0e81d2ed84d54ca300",
+  "sync.lastUpload": "",
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.lastDownload": "2018-01-10T16:03:41.974Z",
+  "sync.forceDownload": false,
+  "sync.anonymousGist": false,
+  "sync.host": "",
+  "sync.pathPrefix": "",
+  "sync.quietSync": false,
+  "sync.askGistName": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.fontSize": 16,
+  "window.newWindowDimensions": "inherit",
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.rulers": [80, 120],
+  "files.insertFinalNewline": true,
+  "typescript.autoImportSuggestions.enabled": false,
+  "editor.minimap.enabled": false,
+  "workbench.editor.tabSizing": "shrink",
+  "explorer.openEditors.visible": 0,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "files.autoSave": "onWindowChange",
+  "markdownlint.config": {
+    "MD029": {"style": "ordered"}
+  },
+  "disableLigatures.mode": "Cursor",
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#bce7ff"
+  },
+  "workbench.colorTheme": "Winter is Coming (Dark)"
+}
