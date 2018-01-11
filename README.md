@@ -113,7 +113,9 @@ Definitely the simplest way to solve this issue.
 
 ## Reach Goals (probably won't happen before presentations)
 
-- [ ] User Authorization
+- [ ] Create 'secret' page for authenticated use, have dropdown to add Miniatures to a personal collection (some field belonging to a User document, probably an array)
+- [ ] Store images in mongodb
+- [ ] User Authorization - allows higher-priveledge users to add to Miniatures collection
 - [ ] Functionality without reloading the page (some actions will still need redirects)
 
 ## Notes for Presentation video
