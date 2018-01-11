@@ -17,14 +17,14 @@ I was cautioned against the microservice approach for this project, as we will d
 - node
 - npm
 
+### _web framework_
+
+- express
+
 ### _database_
 
 - mongoDB
 - mongoose
-
-### _web framework_
-
-- express
 
 ### _templating_
 
@@ -48,6 +48,11 @@ I was cautioned against the microservice approach for this project, as we will d
 
 - nodemon
 - morgan
+
+### _deployment_
+
+- heroku
+- mlab
 
 ## Installation Instructions
 
@@ -151,7 +156,7 @@ Had to reaaaaally think about what my code was doing to find the solution.
 
 ---
 
-going through materialize 1.0.0-alpha.3 javascript file because the implementation in their docs changed, and I had to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work.
+When I had to go through materialize 1.0.0-alpha.3 javascript file because the implementation in their docs changed, and I had to figure out how to get the [Dialogs](http://materializecss.com/dialogs.html) to work.
 
 Meaning, I had to come up with this:
 
