@@ -1,6 +1,6 @@
-<section class="container-form">
+<section class="container-form row">
   <header>
-    <h2 class="amber-text text-lighten-1">Signup</h2>
+    <h2 class="amber-text text-lighten-1 col offset-s2">Signup</h2>
   </header>
 
   {{#if message}}
@@ -9,7 +9,7 @@
     </script>
   {{/if}}
 
-  <form method="post" action="/signup">
+  <form method="post" action="/signup" class="col s8 offset-s2">
     <label>Email
       <input class="form-control" type="text" name="email">
     </label>

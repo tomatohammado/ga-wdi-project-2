@@ -1,6 +1,6 @@
-<section class="container-form">
+<section class="container-form row">
   <header>
-    <h2 class="amber-text text-lighten-1">Login</h2>
+    <h2 class="amber-text text-lighten-1 col offset-s2">Login</h2>
   </header>
 
   {{#if message}}
@@ -9,7 +9,7 @@
     </script>
   {{/if}}
 
-  <form method="post" action="/login">
+  <form method="post" action="/login" class="col s8 offset-s2">
     <label>Email
       <input class="form-control" type="text" name="email">
     </label>
