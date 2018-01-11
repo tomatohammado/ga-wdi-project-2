@@ -33,3 +33,5 @@
 - [materialize 1.0.0-alpha.3 javascript source. I had to _**READ**_ it to get the dialogs to work, because they change the implementation but haven't documented it yet](https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.js)
 
 - [materialize: icons](http://materializecss.com/icons.html)
+
+- [html: label tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)

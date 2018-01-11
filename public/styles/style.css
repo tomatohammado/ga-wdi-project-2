@@ -51,11 +51,7 @@ nav {
   bottom: 0;
 }
 
-.container-form header {
-  color: #EEE;
-}
-
-.container-form form > input{
+.container-form form input{
   color: #d1d1d1;
 }
 
