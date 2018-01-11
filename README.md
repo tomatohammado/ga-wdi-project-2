@@ -8,7 +8,7 @@ I was cautioned against the microservice approach for this project, as we will d
 
 ## Presentation
 
-_{**insert youtube link here**}_
+<https://youtu.be/tAner83YPx0>
 
 ## Technologies Used
 
@@ -166,18 +166,3 @@ Materialize.toast('{{message}}', 4000)
 ```
 
 I had to do something similar to get the responsive navbar to work, but couldn't determine from the 1.0.0-alpha.3 source code what to use as `@params {Element} el`, and there were over 2200 instances of 'el' in the source so I had to drop it and go back to an earlier version.
-
-## Notes for Presentation video
-
-- this is kinda obvious, but what was interesting about my code?
-- what were the things I had to do to wrestle with materialize
-- file structure: separate controller, routes files
-- my...different way of seeding files (and why I prefer it)
-- in video credits, include:
-  - link to deployed site
-  - link to github repo
-  - vscode extensions?
-  - link to rebelscum.com
-  - link to custom font
-  - link to gists of terminal windows
-- possibly some sort of reference to my toggl timer metrics
