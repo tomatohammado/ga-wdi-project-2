@@ -2,9 +2,15 @@
 
 ## Proposal
 
-See `planning/` for proposal
+See [proposal.md](resources/planning/proposal.md) for proposal
 
 I was cautioned against the microservice approach for this project, as we will do something similar in project 3.
+
+The [resources/](resources/) directory contains material I used during the project, includig:
+
+- my vscode settings
+- saved terminal windows
+- links to the links I used for research
 
 ## Presentation
 
@@ -56,7 +62,9 @@ I was cautioned against the microservice approach for this project, as we will d
 
 ## Installation Instructions
 
-There is nothing to install. The database is hosted on mlab, and the site is deployed on heroku.
+Use `npm i` to install node package dependencies.
+
+_Note_: nodemon is not included, as I have it installed globally. It is not vital to work with the source code, but very useful for developing. I may or may not include it as a dev dependency later.
 
 The user can utilize the site by navigating to <https://sheltered-coast-50052.herokuapp.com/>
 
