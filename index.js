@@ -3,11 +3,11 @@ const hbs = require('express-handlebars')
 const parser = require('body-parser')
 const methodOverride = require('method-override')
 const path = require('path')
-const passport = require('passport')
-const flash = require('connect-flash')
+// const passport = require('passport')
+// const flash = require('connect-flash')
 const morgan = require('morgan')
-const cookieParser = require('cookie-parser')
-const session = require('express-session')
+// const cookieParser = require('cookie-parser')
+// const session = require('express-session')
 
 const app = express()
 
@@ -25,18 +25,18 @@ app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 app.use(morgan('dev'))
-app.use(cookieParser())
+// app.use(cookieParser())
 
-app.use(session({
-  secret: 'Hmod\'s Star Wars Miniatures App',
-  resave: true,
-  saveUninitialized: true
-}))
-app.use(passport.initialize())
-app.use(passport.session())
-app.use(flash())
+// app.use(session({
+//   secret: 'Hmod\'s Star Wars Miniatures App',
+//   resave: true,
+//   saveUninitialized: true
+// }))
+// app.use(passport.initialize())
+// app.use(passport.session())
+// app.use(flash())
 
-require('./config/passport')(passport)
+// require('./config/passport')(passport)
 
 app.use((req, res, next) => {
   res.locals.currentUser = req.user
@@ -45,9 +45,9 @@ app.use((req, res, next) => {
 })
 
 const routesMiniatures = require('./config/routesMiniatures')
-const routresUsers = require('./config/routesUsers')
+// const routresUsers = require('./config/routesUsers')
 app.use(routesMiniatures)
-app.use(routresUsers)
+// app.use(routresUsers)
 
 /* I cannot use an arrow function here because I use this.address().port */
 app.listen(app.get('port'), function () {
