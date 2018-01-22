@@ -5,7 +5,8 @@ const Miniature = mongoose.model('Miniature')
 function getMiniatures (req, res) {
   Miniature.find({})
   .then(miniatures => {
-    res.render('homepage', {miniatures: miniatures})
+    // res.render('homepage', {miniatures: miniatures})
+    res.json(miniatures)
   })
 }
 

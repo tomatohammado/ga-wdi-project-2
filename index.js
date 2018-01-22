@@ -8,6 +8,7 @@ const path = require('path')
 const morgan = require('morgan')
 // const cookieParser = require('cookie-parser')
 // const session = require('express-session')
+const cors = require('cors')
 
 const app = express()
 
@@ -20,8 +21,10 @@ app.engine('.hbs', hbs({
   defaultLayout: 'layout-main'
 }))
 
+app.use(cors())
 app.use(express.static(path.join(__dirname, '/public')))
 app.use(parser.urlencoded({ extended: true }))
+app.use(parser.json())
 app.use(methodOverride('_method'))
 
 app.use(morgan('dev'))
