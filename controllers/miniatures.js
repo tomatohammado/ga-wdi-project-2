@@ -11,7 +11,7 @@ function getMiniatures (req, res) {
 }
 
 function postMiniature (req, res) {
-  Miniature.create(req.body.newMiniature)
+  Miniature.create(req.data)
   //  .then(_ => res.redirect('/'))
 }
 
